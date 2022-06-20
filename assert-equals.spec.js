@@ -53,3 +53,7 @@ test(`['a', 'b'] to match ['a', 'd']`, () => {
 test(`Sums to equal same amount`, () => {
   expect(assertEquals(4 + 10, 9 + 16)).toBe(true);
 });
+
+test(`True or false`, () => {
+  expect(assertEquals(true, false)).toBe(true);
+});
