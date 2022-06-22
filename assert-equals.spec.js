@@ -22,7 +22,7 @@ test("1 to match 2", () => {
 
 //5. 1	'1'	Throws error with message 'Expected type number but found type string'
 test(`1 to match "1"`, () => {
-  expect(assertEquals(typeof 1, typeof "1")).toBe(true);
+  expect(assertEquals(1, "1")).toBe(true);
 });
 
 //6. ['a', 'b', 'c']	['a', 'b', 'c']	No error
@@ -38,9 +38,10 @@ describe("checking each array item", () => {
   });
 });
 
-//7 ['a', 'b']	['a', 'b', 'c']	Throws error with message 'Expected array length 2 but found 3'
+//7 ['a', 'b']	['a', 'b', 'c']	Throws error with message 'Expected length 2 but found length 3'
+
 test("['a', 'b'] length to match ['a', 'b', 'c'] length", () => {
-  expect(assertEquals(["a", "b"].length, ["a", "b", "c"].length)).toBe(true);
+  expect(assertEquals(["a", "b"], ["a", "b", "c"])).toBe(true);
 });
 
 //8. ['a', 'b']	['a', 'd']	Throws error with message 'Expected "b" but found "d"'
