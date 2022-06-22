@@ -1,13 +1,13 @@
 {
-  "name": "learn-jest",
+  "name": "fluidly-take-home-challenge",
   "version": "1.0.0",
-  "description": "",
+  "description": "Take home challenge for apprentice application",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alexander Perez-Davies",
   "license": "ISC",
   "devDependencies": {
     "jest": "^28.1.1"
