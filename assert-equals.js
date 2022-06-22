@@ -5,7 +5,7 @@ function assertEquals(expected, actual) {
     return new Error(
       `Expected type ${typeof expected} but found type ${typeof actual}`
     );
-  } else if (expected.length < actual.length) {
+  } else if (expected.length !== actual.length) {
     return new Error(
       `Expected length ${expected.length} but found length ${actual.length}`
     );
