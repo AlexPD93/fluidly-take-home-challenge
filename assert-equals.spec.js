@@ -50,11 +50,37 @@ test(`['a', 'b'] to match ['a', 'd']`, () => {
   expect(assertEquals(["a", "b"], ["a", "d"])).toBe(true);
 });
 
-// 4 + 10 9 + 16 Throws error with message 'Expected 14 but found 25'
+// Extra tests to cover additional cases
+
+//9. 4 + 10 9 + 16 Throws error with message 'Expected 14 but found 25'
 test(`Sums to equal same amount`, () => {
   expect(assertEquals(4 + 10, 9 + 16)).toBe(true);
 });
 
+//10. True or false Throws error with message 'Expected true but found false'
 test(`True or false`, () => {
   expect(assertEquals(true, false)).toBe(true);
+});
+
+//11. String comparison case sensitive Throws error with message 'Expected Hello but got hello'
+test(`String comparison case sensitive`, () => {
+  expect(assertEquals("Hello", "hello")).toBe(true);
+});
+
+//12. Undefined and null Throws error 'Expected type undefined but found type object'
+test(`Undefined and null`, () => {
+  expect(assertEquals(undefined, null)).toBe(true);
+});
+
+//13. +0 and -0 No error
+test(`+0 and -0`, () => {
+  expect(assertEquals(+0, -0)).toBe(true);
+});
+
+//14. {name: alex} and {name: alex} No error
+const alexObj = {
+  name: "alex",
+};
+test(`Same object`, () => {
+  expect(assertEquals(alexObj, alexObj)).toBe(true);
 });
